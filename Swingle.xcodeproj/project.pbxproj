@@ -15,6 +15,8 @@
 		4667184E1D77D5D000D7D0E0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4667184B1D77D5D000D7D0E0 /* Result.framework */; };
 		466718501D77D6DE00D7D0E0 /* SwingleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667184F1D77D6DE00D7D0E0 /* SwingleRequest.swift */; };
 		466718531D77D8BF00D7D0E0 /* SongStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718521D77D8BF00D7D0E0 /* SongStruct.swift */; };
+		466718551D77DAC400D7D0E0 /* ArtistStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718541D77DAC400D7D0E0 /* ArtistStruct.swift */; };
+		4667185D1D77E4FD00D7D0E0 /* TransformUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		4667184B1D77D5D000D7D0E0 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "Carthage/Checkouts/Result/build/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
 		4667184F1D77D6DE00D7D0E0 /* SwingleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleRequest.swift; sourceTree = "<group>"; };
 		466718521D77D8BF00D7D0E0 /* SongStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongStruct.swift; sourceTree = "<group>"; };
+		466718541D77DAC400D7D0E0 /* ArtistStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistStruct.swift; sourceTree = "<group>"; };
+		4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		466717F21D77D0FA00D7D0E0 /* Swingle */ = {
 			isa = PBXGroup;
 			children = (
+				4667185B1D77E4EC00D7D0E0 /* Utils */,
+				4667185A1D77E05000D7D0E0 /* Extension */,
 				466718511D77D8B200D7D0E0 /* Struct */,
 				466717F31D77D0FA00D7D0E0 /* Swingle.h */,
 				466717F51D77D0FA00D7D0E0 /* Info.plist */,
@@ -108,8 +114,24 @@
 			isa = PBXGroup;
 			children = (
 				466718521D77D8BF00D7D0E0 /* SongStruct.swift */,
+				466718541D77DAC400D7D0E0 /* ArtistStruct.swift */,
 			);
 			name = Struct;
+			sourceTree = "<group>";
+		};
+		4667185A1D77E05000D7D0E0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		4667185B1D77E4EC00D7D0E0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				466718501D77D6DE00D7D0E0 /* SwingleRequest.swift in Sources */,
+				4667185D1D77E4FD00D7D0E0 /* TransformUtility.swift in Sources */,
+				466718551D77DAC400D7D0E0 /* ArtistStruct.swift in Sources */,
 				466718531D77D8BF00D7D0E0 /* SongStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
