@@ -9,8 +9,21 @@
 import Foundation
 import Himotoki
 
-public struct Song {
+// MARK: - Songs
+public struct Songs {
+    public var songs: [Song]?
+}
 
+extension Songs: Decodable {
+    public static func decode(e: Extractor) throws -> Songs {
+        return try Songs(
+            songs: decodeArray(e.rawValue)
+        )
+    }
+}
+
+// MARK: - Song
+public struct Song {
     public var url: NSURL
     public var id: UInt64
     public var title: String
@@ -22,7 +35,6 @@ public struct Song {
     public var createdAt: NSDate
     public var updatedAt: NSDate
     public var recognizedAt: NSDate
-
 }
 
 // MARK: - Himotoki Decodable

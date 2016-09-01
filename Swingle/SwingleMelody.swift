@@ -1,5 +1,5 @@
 //
-//  SwingleBeats.swift
+//  SwingleMelody.swift
 //  Swingle
 //
 //  Created by 藤井陽介 on 2016/09/01.
@@ -12,13 +12,13 @@ import Himotoki
 import Result
 
 public extension Swingle {
-    func getSongBeatsInfo(url: String, revision: Int? = nil, success: (Beats) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
-        let request = GetSongBeatsInfo(url: url, revision: revision)
+    func getSongMelodyInfo(url: String, revision: Int? = nil, success: (Notes) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+        let request = GetSongMelodyInfo(url: url, revision: revision)
 
         Session.sendRequest(request) { result in
             switch result {
-            case .Success(let beats):
-                success(beats)
+            case .Success(let melody):
+                success(melody)
             case .Failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
@@ -26,8 +26,8 @@ public extension Swingle {
         }
     }
 
-    func getBeatRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
-        let request = GetBeatRevisions(url: url)
+    func getMelodyRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+        let request = GetMelodyRevisions(url: url)
 
         Session.sendRequest(request) { result in
             switch result {
