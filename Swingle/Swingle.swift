@@ -36,5 +36,27 @@ public class Swingle {
         }
     }
 
+    // MARK: - Get song beats map
+    struct GetSongBeatsInfo: SwingleRequest {
+        let url: String
+        let revision: Int?
 
+        // MARK: RequestType
+        typealias Response = Beats
+
+        var method: HTTPMethod {
+            return .GET
+        }
+
+        var path: String {
+            return "/song/beat.json"
+        }
+
+        var parameters: AnyObject? {
+            return [
+                "url": url,
+                "revision": String(revision),
+            ]
+        }
+    }
 }

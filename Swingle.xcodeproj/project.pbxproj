@@ -19,6 +19,9 @@
 		4667185D1D77E4FD00D7D0E0 /* TransformUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */; };
 		4667185F1D77E7BB00D7D0E0 /* Swingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667185E1D77E7BB00D7D0E0 /* Swingle.swift */; };
 		466718631D77F1D800D7D0E0 /* SwingleSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718621D77F1D800D7D0E0 /* SwingleSong.swift */; };
+		466718651D78237500D7D0E0 /* SwingleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718641D78237500D7D0E0 /* SwingleError.swift */; };
+		466718671D782A6200D7D0E0 /* BeatStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718661D782A6200D7D0E0 /* BeatStruct.swift */; };
+		466718691D782EC900D7D0E0 /* SwingleBeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718681D782EC900D7D0E0 /* SwingleBeats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformUtility.swift; sourceTree = "<group>"; };
 		4667185E1D77E7BB00D7D0E0 /* Swingle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swingle.swift; sourceTree = "<group>"; };
 		466718621D77F1D800D7D0E0 /* SwingleSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleSong.swift; sourceTree = "<group>"; };
+		466718641D78237500D7D0E0 /* SwingleError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleError.swift; sourceTree = "<group>"; };
+		466718661D782A6200D7D0E0 /* BeatStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatStruct.swift; sourceTree = "<group>"; };
+		466718681D782EC900D7D0E0 /* SwingleBeats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleBeats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,8 @@
 				4667184F1D77D6DE00D7D0E0 /* SwingleRequest.swift */,
 				4667185E1D77E7BB00D7D0E0 /* Swingle.swift */,
 				466718621D77F1D800D7D0E0 /* SwingleSong.swift */,
+				466718641D78237500D7D0E0 /* SwingleError.swift */,
+				466718681D782EC900D7D0E0 /* SwingleBeats.swift */,
 			);
 			path = Swingle;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 			children = (
 				466718521D77D8BF00D7D0E0 /* SongStruct.swift */,
 				466718541D77DAC400D7D0E0 /* ArtistStruct.swift */,
+				466718661D782A6200D7D0E0 /* BeatStruct.swift */,
 			);
 			name = Struct;
 			sourceTree = "<group>";
@@ -240,9 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				466718691D782EC900D7D0E0 /* SwingleBeats.swift in Sources */,
 				466718501D77D6DE00D7D0E0 /* SwingleRequest.swift in Sources */,
 				4667185D1D77E4FD00D7D0E0 /* TransformUtility.swift in Sources */,
 				466718551D77DAC400D7D0E0 /* ArtistStruct.swift in Sources */,
+				466718651D78237500D7D0E0 /* SwingleError.swift in Sources */,
+				466718671D782A6200D7D0E0 /* BeatStruct.swift in Sources */,
 				4667185F1D77E7BB00D7D0E0 /* Swingle.swift in Sources */,
 				466718631D77F1D800D7D0E0 /* SwingleSong.swift in Sources */,
 				466718531D77D8BF00D7D0E0 /* SongStruct.swift in Sources */,

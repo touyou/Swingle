@@ -18,6 +18,11 @@ class ViewController: UIViewController {
             print("title: \(song.title)")
             print("artist: \(song.artist.name)")
         })
+
+        Swingle().getSongBeatsInfo("http://www.youtube.com/watch?v=PqJNc9KVIZE", success: { beats in
+            print("first beat position: \(beats.beats?[0].position)")
+            print("first bar start: \(beats.bars?[0].start)")
+        })
     }
 
     override func didReceiveMemoryWarning() {
