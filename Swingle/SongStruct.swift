@@ -9,25 +9,25 @@
 import Foundation
 import Himotoki
 
-struct Song {
+public struct Song {
 
-    var url: NSURL
-    var id: UInt64
-    var title: String
-    var permalink: NSURL
-    var duration: Double
-    var rmsAmplitude: Double
-    var code: String
-    var artist: Artist
-    var createdAt: NSDate
-    var updatedAt: NSDate
-    var recognizedAt: NSDate
+    public var url: NSURL
+    public var id: UInt64
+    public var title: String
+    public var permalink: NSURL
+    public var duration: Double
+    public var rmsAmplitude: Double
+    public var code: String
+    public var artist: Artist
+    public var createdAt: NSDate
+    public var updatedAt: NSDate
+    public var recognizedAt: NSDate
 
 }
 
 extension Song: Decodable {
 
-    static func decode(e: Extractor) throws -> Song {
+    public static func decode(e: Extractor) throws -> Song {
         let transformer = TransformUtility()
 
         return try Song(

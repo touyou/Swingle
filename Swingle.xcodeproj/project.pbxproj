@@ -17,6 +17,8 @@
 		466718531D77D8BF00D7D0E0 /* SongStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718521D77D8BF00D7D0E0 /* SongStruct.swift */; };
 		466718551D77DAC400D7D0E0 /* ArtistStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718541D77DAC400D7D0E0 /* ArtistStruct.swift */; };
 		4667185D1D77E4FD00D7D0E0 /* TransformUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */; };
+		4667185F1D77E7BB00D7D0E0 /* Swingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667185E1D77E7BB00D7D0E0 /* Swingle.swift */; };
+		466718631D77F1D800D7D0E0 /* SwingleSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718621D77F1D800D7D0E0 /* SwingleSong.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		466718521D77D8BF00D7D0E0 /* SongStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongStruct.swift; sourceTree = "<group>"; };
 		466718541D77DAC400D7D0E0 /* ArtistStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistStruct.swift; sourceTree = "<group>"; };
 		4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformUtility.swift; sourceTree = "<group>"; };
+		4667185E1D77E7BB00D7D0E0 /* Swingle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swingle.swift; sourceTree = "<group>"; };
+		466718621D77F1D800D7D0E0 /* SwingleSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleSong.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +96,12 @@
 			isa = PBXGroup;
 			children = (
 				4667185B1D77E4EC00D7D0E0 /* Utils */,
-				4667185A1D77E05000D7D0E0 /* Extension */,
 				466718511D77D8B200D7D0E0 /* Struct */,
 				466717F31D77D0FA00D7D0E0 /* Swingle.h */,
 				466717F51D77D0FA00D7D0E0 /* Info.plist */,
 				4667184F1D77D6DE00D7D0E0 /* SwingleRequest.swift */,
+				4667185E1D77E7BB00D7D0E0 /* Swingle.swift */,
+				466718621D77F1D800D7D0E0 /* SwingleSong.swift */,
 			);
 			path = Swingle;
 			sourceTree = "<group>";
@@ -117,13 +122,6 @@
 				466718541D77DAC400D7D0E0 /* ArtistStruct.swift */,
 			);
 			name = Struct;
-			sourceTree = "<group>";
-		};
-		4667185A1D77E05000D7D0E0 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Extension;
 			sourceTree = "<group>";
 		};
 		4667185B1D77E4EC00D7D0E0 /* Utils */ = {
@@ -245,6 +243,8 @@
 				466718501D77D6DE00D7D0E0 /* SwingleRequest.swift in Sources */,
 				4667185D1D77E4FD00D7D0E0 /* TransformUtility.swift in Sources */,
 				466718551D77DAC400D7D0E0 /* ArtistStruct.swift in Sources */,
+				4667185F1D77E7BB00D7D0E0 /* Swingle.swift in Sources */,
+				466718631D77F1D800D7D0E0 /* SwingleSong.swift in Sources */,
 				466718531D77D8BF00D7D0E0 /* SongStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        Swingle().getSongInfo("http://www.youtube.com/watch?v=PqJNc9KVIZE", success: { song in
+            print("title: \(song.title)")
+            print("artist: \(song.artist.name)")
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,4 +27,3 @@ class ViewController: UIViewController {
 
 
 }
-

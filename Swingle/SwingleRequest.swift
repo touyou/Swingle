@@ -8,16 +8,17 @@
 
 import Foundation
 import APIKit
+import Himotoki
 
 protocol SwingleRequest: RequestType {
 }
 
-extension SwingleRequest {
+extension SwingleRequest where Response: Decodable {
     var baseURL: NSURL {
-        return NSURL(string: "https://widget.songle.jp/api/v1/")!
+        return NSURL(string: "https://widget.songle.jp/api/v1")!
     }
 
-    var baseString: String {
-        return "https://widget.songle.jp/api/v1/"
+    func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> Response {
+        return try decodeValue(object)
     }
 }

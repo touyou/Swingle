@@ -9,14 +9,14 @@
 import Foundation
 import Himotoki
 
-struct Artist {
-    var id: UInt64
-    var name: String
+public struct Artist {
+    public var id: UInt64
+    public var name: String
 }
 
 extension Artist: Decodable {
 
-    static func decode(e: Extractor) throws -> Artist {
+    public static func decode(e: Extractor) throws -> Artist {
         return try Artist(
             id: e <| "id",
             name: e <| "name"
