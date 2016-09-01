@@ -10,6 +10,26 @@
 		466717F41D77D0FA00D7D0E0 /* Swingle.h in Headers */ = {isa = PBXBuildFile; fileRef = 466717F31D77D0FA00D7D0E0 /* Swingle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		466717FB1D77D0FA00D7D0E0 /* Swingle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466717F01D77D0FA00D7D0E0 /* Swingle.framework */; };
 		466718001D77D0FA00D7D0E0 /* SwingleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466717FF1D77D0FA00D7D0E0 /* SwingleTests.swift */; };
+		4667184C1D77D5D000D7D0E0 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466718491D77D5D000D7D0E0 /* APIKit.framework */; };
+		4667184D1D77D5D000D7D0E0 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4667184A1D77D5D000D7D0E0 /* Himotoki.framework */; };
+		4667184E1D77D5D000D7D0E0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4667184B1D77D5D000D7D0E0 /* Result.framework */; };
+		466718501D77D6DE00D7D0E0 /* SwingleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667184F1D77D6DE00D7D0E0 /* SwingleRequest.swift */; };
+		466718531D77D8BF00D7D0E0 /* SongStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718521D77D8BF00D7D0E0 /* SongStruct.swift */; };
+		466718551D77DAC400D7D0E0 /* ArtistStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718541D77DAC400D7D0E0 /* ArtistStruct.swift */; };
+		4667185D1D77E4FD00D7D0E0 /* TransformUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */; };
+		4667185F1D77E7BB00D7D0E0 /* Swingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667185E1D77E7BB00D7D0E0 /* Swingle.swift */; };
+		466718631D77F1D800D7D0E0 /* SwingleSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718621D77F1D800D7D0E0 /* SwingleSong.swift */; };
+		466718651D78237500D7D0E0 /* SwingleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718641D78237500D7D0E0 /* SwingleError.swift */; };
+		466718671D782A6200D7D0E0 /* BeatStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718661D782A6200D7D0E0 /* BeatStruct.swift */; };
+		466718691D782EC900D7D0E0 /* SwingleBeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718681D782EC900D7D0E0 /* SwingleBeats.swift */; };
+		4667186B1D78315000D7D0E0 /* RevisionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667186A1D78315000D7D0E0 /* RevisionStruct.swift */; };
+		4667186D1D78379E00D7D0E0 /* ChordStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667186C1D78379E00D7D0E0 /* ChordStruct.swift */; };
+		4667186F1D7839AB00D7D0E0 /* NoteStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667186E1D7839AB00D7D0E0 /* NoteStruct.swift */; };
+		466718711D7842F200D7D0E0 /* ChorusStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718701D7842F200D7D0E0 /* ChorusStruct.swift */; };
+		466718731D7845F000D7D0E0 /* SwingleChords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718721D7845F000D7D0E0 /* SwingleChords.swift */; };
+		466718751D78465000D7D0E0 /* SwingleMelody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718741D78465000D7D0E0 /* SwingleMelody.swift */; };
+		466718771D7846A800D7D0E0 /* SwingleChorus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718761D7846A800D7D0E0 /* SwingleChorus.swift */; };
+		466718791D7848EE00D7D0E0 /* SwingleSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718781D7848EE00D7D0E0 /* SwingleSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +49,26 @@
 		466717FA1D77D0FA00D7D0E0 /* SwingleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwingleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		466717FF1D77D0FA00D7D0E0 /* SwingleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingleTests.swift; sourceTree = "<group>"; };
 		466718011D77D0FA00D7D0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		466718491D77D5D000D7D0E0 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Checkouts/APIKit/build/Debug/APIKit.framework; sourceTree = "<group>"; };
+		4667184A1D77D5D000D7D0E0 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = "Carthage/Checkouts/Himotoki/build/Debug-iphoneos/Himotoki.framework"; sourceTree = "<group>"; };
+		4667184B1D77D5D000D7D0E0 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "Carthage/Checkouts/Result/build/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
+		4667184F1D77D6DE00D7D0E0 /* SwingleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleRequest.swift; sourceTree = "<group>"; };
+		466718521D77D8BF00D7D0E0 /* SongStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongStruct.swift; sourceTree = "<group>"; };
+		466718541D77DAC400D7D0E0 /* ArtistStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistStruct.swift; sourceTree = "<group>"; };
+		4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformUtility.swift; sourceTree = "<group>"; };
+		4667185E1D77E7BB00D7D0E0 /* Swingle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swingle.swift; sourceTree = "<group>"; };
+		466718621D77F1D800D7D0E0 /* SwingleSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleSong.swift; sourceTree = "<group>"; };
+		466718641D78237500D7D0E0 /* SwingleError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleError.swift; sourceTree = "<group>"; };
+		466718661D782A6200D7D0E0 /* BeatStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatStruct.swift; sourceTree = "<group>"; };
+		466718681D782EC900D7D0E0 /* SwingleBeats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleBeats.swift; sourceTree = "<group>"; };
+		4667186A1D78315000D7D0E0 /* RevisionStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevisionStruct.swift; sourceTree = "<group>"; };
+		4667186C1D78379E00D7D0E0 /* ChordStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordStruct.swift; sourceTree = "<group>"; };
+		4667186E1D7839AB00D7D0E0 /* NoteStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteStruct.swift; sourceTree = "<group>"; };
+		466718701D7842F200D7D0E0 /* ChorusStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChorusStruct.swift; sourceTree = "<group>"; };
+		466718721D7845F000D7D0E0 /* SwingleChords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleChords.swift; sourceTree = "<group>"; };
+		466718741D78465000D7D0E0 /* SwingleMelody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleMelody.swift; sourceTree = "<group>"; };
+		466718761D7846A800D7D0E0 /* SwingleChorus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleChorus.swift; sourceTree = "<group>"; };
+		466718781D7848EE00D7D0E0 /* SwingleSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4667184C1D77D5D000D7D0E0 /* APIKit.framework in Frameworks */,
+				4667184D1D77D5D000D7D0E0 /* Himotoki.framework in Frameworks */,
+				4667184E1D77D5D000D7D0E0 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +96,9 @@
 		466717E61D77D0F900D7D0E0 = {
 			isa = PBXGroup;
 			children = (
+				466718491D77D5D000D7D0E0 /* APIKit.framework */,
+				4667184A1D77D5D000D7D0E0 /* Himotoki.framework */,
+				4667184B1D77D5D000D7D0E0 /* Result.framework */,
 				466717F21D77D0FA00D7D0E0 /* Swingle */,
 				466717FE1D77D0FA00D7D0E0 /* SwingleTests */,
 				466717F11D77D0FA00D7D0E0 /* Products */,
@@ -71,8 +117,19 @@
 		466717F21D77D0FA00D7D0E0 /* Swingle */ = {
 			isa = PBXGroup;
 			children = (
+				4667185B1D77E4EC00D7D0E0 /* Utils */,
+				466718511D77D8B200D7D0E0 /* Struct */,
 				466717F31D77D0FA00D7D0E0 /* Swingle.h */,
 				466717F51D77D0FA00D7D0E0 /* Info.plist */,
+				4667184F1D77D6DE00D7D0E0 /* SwingleRequest.swift */,
+				4667185E1D77E7BB00D7D0E0 /* Swingle.swift */,
+				466718621D77F1D800D7D0E0 /* SwingleSong.swift */,
+				466718641D78237500D7D0E0 /* SwingleError.swift */,
+				466718681D782EC900D7D0E0 /* SwingleBeats.swift */,
+				466718721D7845F000D7D0E0 /* SwingleChords.swift */,
+				466718741D78465000D7D0E0 /* SwingleMelody.swift */,
+				466718761D7846A800D7D0E0 /* SwingleChorus.swift */,
+				466718781D7848EE00D7D0E0 /* SwingleSearch.swift */,
 			);
 			path = Swingle;
 			sourceTree = "<group>";
@@ -84,6 +141,28 @@
 				466718011D77D0FA00D7D0E0 /* Info.plist */,
 			);
 			path = SwingleTests;
+			sourceTree = "<group>";
+		};
+		466718511D77D8B200D7D0E0 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				466718521D77D8BF00D7D0E0 /* SongStruct.swift */,
+				466718541D77DAC400D7D0E0 /* ArtistStruct.swift */,
+				466718661D782A6200D7D0E0 /* BeatStruct.swift */,
+				4667186A1D78315000D7D0E0 /* RevisionStruct.swift */,
+				4667186C1D78379E00D7D0E0 /* ChordStruct.swift */,
+				4667186E1D7839AB00D7D0E0 /* NoteStruct.swift */,
+				466718701D7842F200D7D0E0 /* ChorusStruct.swift */,
+			);
+			name = Struct;
+			sourceTree = "<group>";
+		};
+		4667185B1D77E4EC00D7D0E0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4667185C1D77E4FD00D7D0E0 /* TransformUtility.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +273,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4667186D1D78379E00D7D0E0 /* ChordStruct.swift in Sources */,
+				466718691D782EC900D7D0E0 /* SwingleBeats.swift in Sources */,
+				4667186B1D78315000D7D0E0 /* RevisionStruct.swift in Sources */,
+				466718501D77D6DE00D7D0E0 /* SwingleRequest.swift in Sources */,
+				466718751D78465000D7D0E0 /* SwingleMelody.swift in Sources */,
+				4667185D1D77E4FD00D7D0E0 /* TransformUtility.swift in Sources */,
+				466718551D77DAC400D7D0E0 /* ArtistStruct.swift in Sources */,
+				466718731D7845F000D7D0E0 /* SwingleChords.swift in Sources */,
+				4667186F1D7839AB00D7D0E0 /* NoteStruct.swift in Sources */,
+				466718651D78237500D7D0E0 /* SwingleError.swift in Sources */,
+				466718711D7842F200D7D0E0 /* ChorusStruct.swift in Sources */,
+				466718771D7846A800D7D0E0 /* SwingleChorus.swift in Sources */,
+				466718671D782A6200D7D0E0 /* BeatStruct.swift in Sources */,
+				466718791D7848EE00D7D0E0 /* SwingleSearch.swift in Sources */,
+				4667185F1D77E7BB00D7D0E0 /* Swingle.swift in Sources */,
+				466718631D77F1D800D7D0E0 /* SwingleSong.swift in Sources */,
+				466718531D77D8BF00D7D0E0 /* SongStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,26 +406,41 @@
 		466718051D77D0FA00D7D0E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Checkouts/APIKit/build/Debug",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Himotoki/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Swingle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.touyou.Swingle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		466718061D77D0FA00D7D0E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Checkouts/APIKit/build/Debug",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Himotoki/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Swingle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

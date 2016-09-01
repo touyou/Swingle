@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Carthage/Checkouts/APIKit/APIKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Himotoki/Himotoki.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Result/Result.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Swingle.xcodeproj">
    </FileRef>
    <FileRef
