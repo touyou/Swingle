@@ -12,19 +12,17 @@ import Himotoki
 import Result
 
 public extension Swingle {
-
-    func getSongInfo(url: String, callbackQueue: CallbackQueue? = nil, success: (Song) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    func getSongInfo(url: String, success: (Song) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongInfo(url: url)
 
-        Session.sendRequest(request, callbackQueue: callbackQueue) { result in
+        Session.sendRequest(request) { result in
             switch result {
             case .Success(let song):
                 success(song)
             case .Failure(let error):
                 failure?(error)
-                print("error: \(error)(\(request.path))")
+                print("error: \(error)")
             }
         }
     }
-
 }

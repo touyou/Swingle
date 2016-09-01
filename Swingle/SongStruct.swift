@@ -25,8 +25,8 @@ public struct Song {
 
 }
 
+// MARK: - Himotoki Decodable
 extension Song: Decodable {
-
     public static func decode(e: Extractor) throws -> Song {
         let transformer = TransformUtility()
 
@@ -44,5 +44,4 @@ extension Song: Decodable {
             recognizedAt: transformer.applyDate(e <| "recognizedAt")
         )
     }
-
 }

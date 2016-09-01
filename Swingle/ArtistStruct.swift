@@ -14,13 +14,12 @@ public struct Artist {
     public var name: String
 }
 
+// MARK: - Himotoki Decodable
 extension Artist: Decodable {
-
     public static func decode(e: Extractor) throws -> Artist {
         return try Artist(
             id: e <| "id",
             name: e <| "name"
         )
     }
-
 }

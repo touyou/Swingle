@@ -13,11 +13,13 @@ import Himotoki
 protocol SwingleRequest: RequestType {
 }
 
-extension SwingleRequest where Response: Decodable {
+extension SwingleRequest {
     var baseURL: NSURL {
         return NSURL(string: "https://widget.songle.jp/api/v1")!
     }
+}
 
+extension SwingleRequest where Response: Decodable {
     func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> Response {
         return try decodeValue(object)
     }

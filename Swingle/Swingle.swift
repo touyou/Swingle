@@ -14,20 +14,25 @@ public class Swingle {
 
     public init() {}
 
+    // MARK: - Get song information
     struct GetSongInfo: SwingleRequest {
+        let url: String
+
+        // MARK: RequestType
         typealias Response = Song
 
         var method: HTTPMethod {
             return .GET
         }
-        var path: String
 
-        init() {
-            path = "/song.json"
+        var path: String {
+            return "/song.json"
         }
 
-        init(url: String) {
-            path = "/song.json?url=" + url.componentsSeparatedByString("//")[1]
+        var parameters: AnyObject? {
+            return [
+                "url": url
+            ]
         }
     }
 
