@@ -12,6 +12,15 @@ import Himotoki
 import Result
 
 public extension Swingle {
+    /**
+    GET song/chorus.json
+
+    Example:
+
+        Swingle().getSongChorusInfo("URL", success: { chorus in
+            print("first chorus duration: \(chorus.chorusSegments?[0].duration)")
+        })
+    */
     func getSongChorusInfo(url: String, revision: Int? = nil, success: (Chorus) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongChorusInfo(url: url, revision: revision)
 
@@ -26,6 +35,15 @@ public extension Swingle {
         }
     }
 
+    /**
+    GET song/chorus_revision.json
+
+    Example:
+
+        Swingle().getChorusRevisions("URL", success: { revisions in
+            print("first chorus revision: \(revisions.revisions?[0].updatedAt)")
+        })
+    */
     func getChorusRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetChorusRevisions(url: url)
 

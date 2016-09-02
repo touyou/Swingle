@@ -12,6 +12,15 @@ import Himotoki
 import Result
 
 public extension Swingle {
+    /**
+    GET song/search.json
+
+    Example:
+
+        Swingle().searchSong("", success: { songs in
+            print("first song name: \(songs.songs?[0].title)")
+        })
+     */
     func searchSong(q: String, success: (Songs) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = SearchSong(q: q)
 

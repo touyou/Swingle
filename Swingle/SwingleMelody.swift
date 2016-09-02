@@ -12,6 +12,15 @@ import Himotoki
 import Result
 
 public extension Swingle {
+    /**
+    GET song/melody.json
+
+    Example:
+
+        Swingle().getSongMelodyInfo("URL", success: { melody in
+            print("first pitch: \(melody.notes?[0].pitch)")
+        })
+    */
     func getSongMelodyInfo(url: String, revision: Int? = nil, success: (Notes) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongMelodyInfo(url: url, revision: revision)
 
@@ -26,6 +35,16 @@ public extension Swingle {
         }
     }
 
+
+    /**
+    GET song/melody_revision.json
+
+    Example:
+
+        Swingle().getMelodyRevisions("URL", success: { revisions in
+            print("first melody revision: \(revisions.revisions?[0].updatedAt)")
+        })
+     */
     func getMelodyRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetMelodyRevisions(url: url)
 

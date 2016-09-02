@@ -12,6 +12,16 @@ import Himotoki
 import Result
 
 public extension Swingle {
+    /**
+    GET /song.json
+
+    Example:
+
+        Swingle().getSongInfo("URL", success: { song in
+            print("title: \(song.title)")
+            print("artist: \(song.artist.name)")
+        })
+    */
     func getSongInfo(url: String, success: (Song) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongInfo(url: url)
 
