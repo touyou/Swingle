@@ -31,7 +31,7 @@ struct SwingleError: ErrorType {
             message = "不明なエラーが発生しました。"
 
         default:
-            message = "Unknown Error"
+            message = "Unknown Error code=\(statusCode)"
         }
     }
 }

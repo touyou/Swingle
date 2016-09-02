@@ -24,7 +24,7 @@ extension Songs: Decodable {
 
 // MARK: - Song
 public struct Song {
-    public var url: NSURL
+    public var url: NSURL?
     public var id: UInt64
     public var title: String
     public var permalink: NSURL
@@ -43,7 +43,7 @@ extension Song: Decodable {
         let transformer = TransformUtility()
 
         return try Song(
-            url: transformer.applyURL(e <| "url"),
+            url: transformer.applyURL(e <|? "url" ?? ""),
             id: e <| "id",
             title: e <| "title",
             permalink: transformer.applyURL(e <| "permalink"),

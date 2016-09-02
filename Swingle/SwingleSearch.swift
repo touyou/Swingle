@@ -13,7 +13,7 @@ import Result
 
 public extension Swingle {
     /**
-    GET song/search.json
+    GET songs/search.json
 
     Example:
 

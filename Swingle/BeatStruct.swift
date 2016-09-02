@@ -27,18 +27,18 @@ extension Beats: Decodable {
 
 // MARK: - Beat
 public struct Beat {
-    public var index: UInt32
-    public var start: UInt64
-    public var position: Int
+    public var index: UInt32?
+    public var start: UInt64?
+    public var position: Int?
 }
 
 // MARK: Himotoki Decodable
 extension Beat: Decodable {
     public static func decode(e: Extractor) throws -> Beat {
         return try Beat(
-            index: e <| "index",
-            start: e <| "start",
-            position: e <| "position"
+            index: e <|? "index",
+            start: e <|? "start",
+            position: e <|? "position"
         )
     }
 }

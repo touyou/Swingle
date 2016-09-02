@@ -232,7 +232,7 @@ public class Swingle {
         }
 
         var path: String {
-            return "/song/search.json"
+            return "/songs/search.json"
         }
 
         var parameters: AnyObject? {
