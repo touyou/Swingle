@@ -30,6 +30,7 @@
 		466718751D78465000D7D0E0 /* SwingleMelody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718741D78465000D7D0E0 /* SwingleMelody.swift */; };
 		466718771D7846A800D7D0E0 /* SwingleChorus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718761D7846A800D7D0E0 /* SwingleChorus.swift */; };
 		466718791D7848EE00D7D0E0 /* SwingleSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466718781D7848EE00D7D0E0 /* SwingleSearch.swift */; };
+		46FC5B861D7B0637002F358C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FC5B851D7B0636002F358C /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		466718741D78465000D7D0E0 /* SwingleMelody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleMelody.swift; sourceTree = "<group>"; };
 		466718761D7846A800D7D0E0 /* SwingleChorus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleChorus.swift; sourceTree = "<group>"; };
 		466718781D7848EE00D7D0E0 /* SwingleSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingleSearch.swift; sourceTree = "<group>"; };
+		46FC5B851D7B0636002F358C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FC5B861D7B0637002F358C /* AudioToolbox.framework in Frameworks */,
 				4667184C1D77D5D000D7D0E0 /* APIKit.framework in Frameworks */,
 				4667184D1D77D5D000D7D0E0 /* Himotoki.framework in Frameworks */,
 				4667184E1D77D5D000D7D0E0 /* Result.framework in Frameworks */,
@@ -96,6 +99,7 @@
 		466717E61D77D0F900D7D0E0 = {
 			isa = PBXGroup;
 			children = (
+				46FC5B851D7B0636002F358C /* AudioToolbox.framework */,
 				466718491D77D5D000D7D0E0 /* APIKit.framework */,
 				4667184A1D77D5D000D7D0E0 /* Himotoki.framework */,
 				4667184B1D77D5D000D7D0E0 /* Result.framework */,

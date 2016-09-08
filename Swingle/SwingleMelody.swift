@@ -58,4 +58,12 @@ public extension Swingle {
             }
         }
     }
+
+    /**
+    */
+    func playMelody(url: String, failure: ((SessionTaskError) -> Void)? = nil) {
+        self.getSongMelodyInfo(url, success: { notes in
+
+            }, failure: failure)
+    }
 }
