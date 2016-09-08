@@ -16,7 +16,7 @@ public struct Chorus {
 }
 
 extension Chorus: Decodable {
-    public static func decode(e: Extractor) throws -> Chorus {
+    public static func decode(_ e: Extractor) throws -> Chorus {
         return try Chorus(
             chorusSegments: e <||? "chorusSegments",
             repeatSegments: e <||? "repeatSegments"
@@ -32,7 +32,7 @@ public struct Segment {
 }
 
 extension Segment: Decodable {
-    public static func decode(e: Extractor) throws -> Segment {
+    public static func decode(_ e: Extractor) throws -> Segment {
         return try Segment(
             index: e <|? "index",
             duration: e <|? "duration",

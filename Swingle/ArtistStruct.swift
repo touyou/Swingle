@@ -16,7 +16,7 @@ public struct Artist {
 
 // MARK: - Himotoki Decodable
 extension Artist: Decodable {
-    public static func decode(e: Extractor) throws -> Artist {
+    public static func decode(_ e: Extractor) throws -> Artist {
         return try Artist(
             id: e <| "id",
             name: e <| "name"

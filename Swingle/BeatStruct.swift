@@ -17,7 +17,7 @@ public struct Beats {
 
 // MARK: Himotoki Decodable
 extension Beats: Decodable {
-    public static func decode(e: Extractor) throws -> Beats {
+    public static func decode(_ e: Extractor) throws -> Beats {
         return try Beats(
             beats: e <||? "beats",
             bars: e <||? "bars"
@@ -34,7 +34,7 @@ public struct Beat {
 
 // MARK: Himotoki Decodable
 extension Beat: Decodable {
-    public static func decode(e: Extractor) throws -> Beat {
+    public static func decode(_ e: Extractor) throws -> Beat {
         return try Beat(
             index: e <|? "index",
             start: e <|? "start",
@@ -52,7 +52,7 @@ public struct Bar {
 
 // MARK: Himotoki Decodable
 extension Bar: Decodable {
-    public static func decode(e: Extractor) throws -> Bar {
+    public static func decode(_ e: Extractor) throws -> Bar {
         return try Bar(
             start: e <| "start",
             beats: e <||? "beats",

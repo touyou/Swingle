@@ -10,7 +10,7 @@ import Foundation
 import APIKit
 import Himotoki
 
-struct SwingleError: ErrorType {
+struct SwingleError: Error {
     let message: String
 
     init(statusCode: Int) {

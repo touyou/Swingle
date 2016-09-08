@@ -15,7 +15,7 @@ public struct Songs {
 }
 
 extension Songs: Decodable {
-    public static func decode(e: Extractor) throws -> Songs {
+    public static func decode(_ e: Extractor) throws -> Songs {
         return try Songs(
             songs: decodeArray(e.rawValue)
         )
@@ -24,22 +24,22 @@ extension Songs: Decodable {
 
 // MARK: - Song
 public struct Song {
-    public var url: NSURL?
+    public var url: URL?
     public var id: UInt64
     public var title: String
-    public var permalink: NSURL
+    public var permalink: URL
     public var duration: Double
     public var rmsAmplitude: Double
     public var code: String
     public var artist: Artist
-    public var createdAt: NSDate
-    public var updatedAt: NSDate
-    public var recognizedAt: NSDate
+    public var createdAt: Date
+    public var updatedAt: Date
+    public var recognizedAt: Date
 }
 
 // MARK: - Himotoki Decodable
 extension Song: Decodable {
-    public static func decode(e: Extractor) throws -> Song {
+    public static func decode(_ e: Extractor) throws -> Song {
         let transformer = TransformUtility()
 
         return try Song(

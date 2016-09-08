@@ -21,14 +21,14 @@ public extension Swingle {
             print("first pitch: \(melody.notes?[0].pitch)")
         })
     */
-    func getSongMelodyInfo(url: String, revision: Int? = nil, success: (Notes) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    func getSongMelodyInfo(_ url: String, revision: Int? = nil, success: @escaping (Notes) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongMelodyInfo(url: url, revision: revision)
 
         Session.sendRequest(request) { result in
             switch result {
-            case .Success(let melody):
+            case .success(let melody):
                 success(melody)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }
@@ -45,14 +45,14 @@ public extension Swingle {
             print("first melody revision: \(revisions.revisions?[0].updatedAt)")
         })
      */
-    func getMelodyRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    func getMelodyRevisions(_ url: String, success: @escaping (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetMelodyRevisions(url: url)
 
         Session.sendRequest(request) { result in
             switch result {
-            case .Success(let revisions):
+            case .success(let revisions):
                 success(revisions)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }
@@ -61,7 +61,7 @@ public extension Swingle {
 
     /**
     */
-    func playMelody(url: String, failure: ((SessionTaskError) -> Void)? = nil) {
+    func playMelody(_ url: String, failure: ((SessionTaskError) -> Void)? = nil) {
         self.getSongMelodyInfo(url, success: { notes in
 
             }, failure: failure)

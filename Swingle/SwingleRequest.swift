@@ -14,13 +14,13 @@ protocol SwingleRequest: RequestType {
 }
 
 extension SwingleRequest {
-    var baseURL: NSURL {
-        return NSURL(string: "https://widget.songle.jp/api/v1")!
+    var baseUrl: URL {
+        return URL(string: "https://widget.songle.jp/api/v1")!
     }
 }
 
 extension SwingleRequest where Response: Decodable {
-    func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> Response {
+    internal func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
         return try decodeValue(object)
     }
 }

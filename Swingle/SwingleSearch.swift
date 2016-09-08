@@ -21,14 +21,14 @@ public extension Swingle {
             print("first song name: \(songs.songs?[0].title)")
         })
      */
-    func searchSong(q: String, success: (Songs) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    func searchSong(_ q: String, success: @escaping (Songs) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = SearchSong(q: q)
 
         Session.sendRequest(request) { result in
             switch result {
-            case .Success(let songs):
+            case .success(let songs):
                 success(songs)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }

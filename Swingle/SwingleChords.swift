@@ -21,14 +21,14 @@ public extension Swingle {
             print("first chord: \(chords.chords?[0].name)")
         })
      */
-    func getSongChordInfo(url: String, revision: Int? = nil, success: (Chords) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    func getSongChordInfo(_ url: String, revision: Int? = nil, success: @escaping (Chords) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongChordInfo(url: url, revision: revision)
 
         Session.sendRequest(request) { result in
             switch result {
-            case .Success(let chords):
+            case .success(let chords):
                 success(chords)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }
@@ -44,14 +44,14 @@ public extension Swingle {
             print("first chord revision: \(revisions.revisions?[0].updatedAt)")
         })
     */
-    func getChordRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    func getChordRevisions(_ url: String, success: @escaping (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetChordRevisions(url: url)
 
         Session.sendRequest(request) { result in
             switch result {
-            case .Success(let revisions):
+            case .success(let revisions):
                 success(revisions)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }

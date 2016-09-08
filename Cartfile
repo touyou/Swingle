@@ -1,2 +1,2 @@
-github "ishkawa/APIKit" ~> 2.0
-github "ikesyo/Himotoki" ~> 2.1.1
+github "ishkawa/APIKit" "si-swift3"
+github "ikesyo/Himotoki" "swift3"

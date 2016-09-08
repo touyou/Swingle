@@ -22,14 +22,14 @@ public extension Swingle {
             print("first bar start: \(beats.bars?[0].start)")
         })
     */
-    func getSongBeatsInfo(url: String, revision: Int? = nil, success: (Beats) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    func getSongBeatsInfo(_ url: String, revision: Int? = nil, success: @escaping (Beats) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongBeatsInfo(url: url, revision: revision)
 
         Session.sendRequest(request) { result in
             switch result {
-            case .Success(let beats):
+            case .success(let beats):
                 success(beats)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }
@@ -46,14 +46,14 @@ public extension Swingle {
         })
 
     */
-    func getBeatRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    func getBeatRevisions(_ url: String, success: @escaping (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetBeatRevisions(url: url)
 
         Session.sendRequest(request) { result in
             switch result {
-            case .Success(let revisions):
+            case .success(let revisions):
                 success(revisions)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }
