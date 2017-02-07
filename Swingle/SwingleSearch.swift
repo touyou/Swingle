@@ -24,7 +24,7 @@ public extension Swingle {
     func searchSong(_ q: String, success: @escaping (Songs) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = SearchSong(q: q)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
             case .success(let songs):
                 success(songs)

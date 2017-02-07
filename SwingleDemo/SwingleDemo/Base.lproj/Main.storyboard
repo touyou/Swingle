@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,128 +19,128 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcJ-Io-oUW">
-                                <rect key="frame" x="20" y="70" width="560" height="30"/>
+                                <rect key="frame" x="16" y="70" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIi-JR-f4p">
-                                <rect key="frame" x="20" y="108" width="560" height="30"/>
-                                <color key="backgroundColor" red="0.10090269893407822" green="0.11691553145647049" blue="0.14431518316268921" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="108" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.10090269893407822" green="0.11691553145647049" blue="0.14431518316268921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
                                 <state key="normal" title="Info">
-                                    <color key="titleColor" red="0.9166492223739624" green="0.91662180423736572" blue="0.91663730144500732" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.9166492223739624" green="0.91662180423736572" blue="0.91663730144500732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pushInfo" destination="BYZ-38-t0r" eventType="touchUpInside" id="36o-vt-J9c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYw-xV-Tiw">
-                                <rect key="frame" x="20" y="146" width="134" height="30"/>
-                                <color key="backgroundColor" red="0.1009026989" green="0.1169155315" blue="0.1443151832" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="146" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.1009026989" green="0.1169155315" blue="0.1443151832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Beats">
-                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pushBeat" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQe-Xe-HPs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oh-r6-S6c">
-                                <rect key="frame" x="162" y="146" width="134" height="30"/>
-                                <color key="backgroundColor" red="0.1009026989" green="0.1169155315" blue="0.1443151832" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="104" y="146" width="79.5" height="30"/>
+                                <color key="backgroundColor" red="0.1009026989" green="0.1169155315" blue="0.1443151832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Chords">
-                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pushChord" destination="BYZ-38-t0r" eventType="touchUpInside" id="2y9-gC-v0s"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tV-vS-HOy">
-                                <rect key="frame" x="20" y="184" width="276" height="30"/>
-                                <color key="backgroundColor" red="0.07920924574136734" green="0.6214250922203064" blue="0.65055453777313232" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="184" width="167.5" height="30"/>
+                                <color key="backgroundColor" red="0.07920924574136734" green="0.6214250922203064" blue="0.65055453777313232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Beats Revision">
-                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pushBeatRevision" destination="BYZ-38-t0r" eventType="touchUpInside" id="AHo-jr-KTK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNR-DR-BPe">
-                                <rect key="frame" x="304" y="146" width="134" height="30"/>
-                                <color key="backgroundColor" red="0.1009026989" green="0.1169155315" blue="0.1443151832" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="191.5" y="146" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.1009026989" green="0.1169155315" blue="0.1443151832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Melody">
-                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pushMelody" destination="BYZ-38-t0r" eventType="touchUpInside" id="LNm-Si-y2I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgk-Iu-Y89">
-                                <rect key="frame" x="446" y="146" width="134" height="30"/>
-                                <color key="backgroundColor" red="0.1009026989" green="0.1169155315" blue="0.1443151832" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="279.5" y="146" width="79.5" height="30"/>
+                                <color key="backgroundColor" red="0.1009026989" green="0.1169155315" blue="0.1443151832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Chorus">
-                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pushChorus" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLR-K0-pdd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NE-fN-wMA">
-                                <rect key="frame" x="304" y="184" width="276" height="30"/>
-                                <color key="backgroundColor" red="0.079209245740000003" green="0.62142509219999997" blue="0.65055453780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="191.5" y="184" width="167.5" height="30"/>
+                                <color key="backgroundColor" red="0.079209245740000003" green="0.62142509219999997" blue="0.65055453780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Chord Revision">
-                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pushChordRevision" destination="BYZ-38-t0r" eventType="touchUpInside" id="4F6-qh-4oZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE0-wo-LOb">
-                                <rect key="frame" x="304" y="222" width="276" height="30"/>
-                                <color key="backgroundColor" red="0.079209245740000003" green="0.62142509219999997" blue="0.65055453780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="191.5" y="222" width="167.5" height="30"/>
+                                <color key="backgroundColor" red="0.079209245740000003" green="0.62142509219999997" blue="0.65055453780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Chorus Revision">
-                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pushChorusRevision" destination="BYZ-38-t0r" eventType="touchUpInside" id="ag9-s0-LV2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-Ir-O6v">
-                                <rect key="frame" x="20" y="222" width="276" height="30"/>
-                                <color key="backgroundColor" red="0.079209245740000003" green="0.62142509219999997" blue="0.65055453780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="222" width="167.5" height="30"/>
+                                <color key="backgroundColor" red="0.079209245740000003" green="0.62142509219999997" blue="0.65055453780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Melody Revision">
-                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pushMelodyRevision" destination="BYZ-38-t0r" eventType="touchUpInside" id="BQI-8f-TqL"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZC-Zh-xff">
-                                <rect key="frame" x="20" y="302" width="560" height="30"/>
+                                <rect key="frame" x="16" y="302" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tw0-RZ-2dX">
-                                <rect key="frame" x="20" y="340" width="560" height="30"/>
-                                <color key="backgroundColor" red="0.12156900018453598" green="0.12941199541091919" blue="0.1568630039691925" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="340" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.12156900018453598" green="0.12941199541091919" blue="0.1568630039691925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Search">
-                                    <color key="titleColor" red="0.97647100687026978" green="0.97254902124404907" blue="0.96078401803970337" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.97647100687026978" green="0.97254902124404907" blue="0.96078401803970337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="search" destination="BYZ-38-t0r" eventType="touchUpInside" id="ref-vI-rtD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Songle API Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UF2-uV-Ucj">
-                                <rect key="frame" x="182" y="390" width="236" height="36"/>
+                                <rect key="frame" x="69.5" y="390" width="236" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kgk-Iu-Y89" firstAttribute="top" secondItem="oIi-JR-f4p" secondAttribute="bottom" constant="8" id="0IA-I8-afW"/>
                             <constraint firstItem="7NE-fN-wMA" firstAttribute="trailing" secondItem="kgk-Iu-Y89" secondAttribute="trailing" id="11r-wY-pJi"/>

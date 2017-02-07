@@ -25,7 +25,7 @@ public extension Swingle {
     func getSongInfo(_ url: String, success: @escaping (Song) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongInfo(url: url)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
             case .success(let song):
                 success(song)

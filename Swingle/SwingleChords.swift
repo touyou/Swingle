@@ -24,7 +24,7 @@ public extension Swingle {
     func getSongChordInfo(_ url: String, revision: Int? = nil, success: @escaping (Chords) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongChordInfo(url: url, revision: revision)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
             case .success(let chords):
                 success(chords)
@@ -47,7 +47,7 @@ public extension Swingle {
     func getChordRevisions(_ url: String, success: @escaping (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetChordRevisions(url: url)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
             case .success(let revisions):
                 success(revisions)

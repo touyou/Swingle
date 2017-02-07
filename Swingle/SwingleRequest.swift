@@ -10,11 +10,11 @@ import Foundation
 import APIKit
 import Himotoki
 
-protocol SwingleRequest: RequestType {
+protocol SwingleRequest: Request {
 }
 
 extension SwingleRequest {
-    var baseUrl: URL {
+    var baseURL: URL {
         return URL(string: "https://widget.songle.jp/api/v1")!
     }
 }
