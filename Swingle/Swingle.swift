@@ -10,7 +10,7 @@ import Foundation
 import APIKit
 import Himotoki
 
-public class Swingle {
+open class Swingle {
 
     public init() {}
 
@@ -22,14 +22,14 @@ public class Swingle {
         typealias Response = Song
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
             return "/song.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "url": url
             ]
@@ -45,17 +45,17 @@ public class Swingle {
         typealias Response = Beats
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
             return "/song/beat.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "url": url,
-                "revision": String(revision),
+                "revision": String(describing: revision),
             ]
         }
     }
@@ -68,14 +68,14 @@ public class Swingle {
         typealias Response = Revisions
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
             return "/song/beat_revisions.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "url": url,
             ]
@@ -91,17 +91,17 @@ public class Swingle {
         typealias Response = Chords
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
             return "/song/chord.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "url": url,
-                "revision": String(revision),
+                "revision": String(describing: revision),
             ]
         }
     }
@@ -114,14 +114,14 @@ public class Swingle {
         typealias Response = Revisions
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
             return "/song/chord_revisions.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "url": url,
             ]
@@ -137,17 +137,17 @@ public class Swingle {
         typealias Response = Notes
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
             return "/song/melody.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "url": url,
-                "revision": String(revision),
+                "revision": String(describing: revision),
             ]
         }
     }
@@ -160,14 +160,14 @@ public class Swingle {
         typealias Response = Revisions
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
             return "/song/melody_revisions.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "url": url,
             ]
@@ -183,17 +183,17 @@ public class Swingle {
         typealias Response = Chorus
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
             return "/song/chorus.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "url": url,
-                "revision": String(revision),
+                "revision": String(describing: revision),
             ]
         }
     }
@@ -206,14 +206,14 @@ public class Swingle {
         typealias Response = Revisions
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
             return "/song/chorus_revisions.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "url": url,
             ]
@@ -228,14 +228,14 @@ public class Swingle {
         typealias Response = Songs
 
         var method: HTTPMethod {
-            return .GET
+            return .get
         }
 
         var path: String {
-            return "/song/search.json"
+            return "/songs/search.json"
         }
 
-        var parameters: AnyObject? {
+        var parameters: Any? {
             return [
                 "q": q,
             ]

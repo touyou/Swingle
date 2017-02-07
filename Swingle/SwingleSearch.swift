@@ -12,14 +12,23 @@ import Himotoki
 import Result
 
 public extension Swingle {
-    func searchSong(q: String, success: (Songs) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    /**
+    GET songs/search.json
+
+    Example:
+
+        Swingle().searchSong("", success: { songs in
+            print("first song name: \(songs.songs?[0].title)")
+        })
+     */
+    func searchSong(_ q: String, success: @escaping (Songs) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = SearchSong(q: q)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
-            case .Success(let songs):
+            case .success(let songs):
                 success(songs)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }

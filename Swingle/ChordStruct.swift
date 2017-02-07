@@ -15,7 +15,7 @@ public struct Chords {
 }
 
 extension Chords: Decodable {
-    public static func decode(e: Extractor) throws -> Chords {
+    public static func decode(_ e: Extractor) throws -> Chords {
         return try Chords(
             chords: e <||? "chords"
         )
@@ -31,7 +31,7 @@ public struct Chord {
 }
 
 extension Chord: Decodable {
-    public static func decode(e: Extractor) throws -> Chord {
+    public static func decode(_ e: Extractor) throws -> Chord {
         return try Chord(
             index: e <| "index",
             start: e <| "start",

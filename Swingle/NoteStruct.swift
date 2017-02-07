@@ -15,7 +15,7 @@ public struct Notes {
 }
 
 extension Notes: Decodable {
-    public static func decode(e: Extractor) throws -> Notes {
+    public static func decode(_ e: Extractor) throws -> Notes {
         return try Notes(
             notes: e <||? "notes"
         )
@@ -32,7 +32,7 @@ public struct Note {
 }
 
 extension Note: Decodable {
-    public static func decode(e: Extractor) throws -> Note {
+    public static func decode(_ e: Extractor) throws -> Note {
         return try Note(
             index: e <| "index",
             start: e <| "start",

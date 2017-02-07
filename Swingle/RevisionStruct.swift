@@ -15,7 +15,7 @@ public struct Revisions {
 }
 
 extension Revisions: Decodable {
-    public static func decode(e: Extractor) throws -> Revisions {
+    public static func decode(_ e: Extractor) throws -> Revisions {
         return try Revisions(
             revisions: decodeArray(e.rawValue)
         )
@@ -25,11 +25,11 @@ extension Revisions: Decodable {
 // MARK: - Revision
 public struct Revision {
     public var revision: UInt64
-    public var updatedAt: NSDate
+    public var updatedAt: Date
 }
 
 extension Revision: Decodable {
-    public static func decode(e: Extractor) throws -> Revision {
+    public static func decode(_ e: Extractor) throws -> Revision {
         let transformer = TransformUtility()
 
         return try Revision(

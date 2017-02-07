@@ -12,28 +12,46 @@ import Himotoki
 import Result
 
 public extension Swingle {
-    func getSongChordInfo(url: String, revision: Int? = nil, success: (Chords) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    /**
+    GET song/chord.json
+
+    Example:
+
+        Swingle().getSongChordInfo("URL", success: { chords in
+            print("first chord: \(chords.chords?[0].name)")
+        })
+     */
+    func getSongChordInfo(_ url: String, revision: Int? = nil, success: @escaping (Chords) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongChordInfo(url: url, revision: revision)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
-            case .Success(let chords):
+            case .success(let chords):
                 success(chords)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }
         }
     }
 
-    func getChordRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    /**
+    GET song/chord_revisions.json
+
+    Example:
+
+        Swingle().getChordRevisions("URL", success: { revisions in
+            print("first chord revision: \(revisions.revisions?[0].updatedAt)")
+        })
+    */
+    func getChordRevisions(_ url: String, success: @escaping (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetChordRevisions(url: url)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
-            case .Success(let revisions):
+            case .success(let revisions):
                 success(revisions)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }

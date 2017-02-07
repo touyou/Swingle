@@ -11,29 +11,29 @@ import Himotoki
 
 struct TransformUtility {
 
-    let URLTransformer = Transformer<String, NSURL> { URLString throws -> NSURL in
+    let URLTransformer = Transformer<String, URL> { URLString throws -> URL in
         guard let URL = NSURL(string: URLString) else {
             throw customError("Invalid URL string: \(URLString)")
         }
 
-        return URL
+        return URL as URL
     }
 
-    func applyURL(string: String) throws -> NSURL {
+    func applyURL(_ string: String) throws -> URL {
         return try URLTransformer.apply(string)
     }
 
-    let DateTransformer = Transformer<String, NSDate> { DateString throws -> NSDate in
-        let formatter = NSDateFormatter()
+    let DateTransformer = Transformer<String, Date> { DateString throws -> Date in
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        guard let Date = formatter.dateFromString(DateString) else {
+        guard let Date = formatter.date(from: DateString) else {
             throw customError("Invalid Date string: \(DateString)")
         }
 
         return Date
     }
 
-    func applyDate(string: String) throws -> NSDate {
+    func applyDate(_ string: String) throws -> Date {
         return try DateTransformer.apply(string)
     }
 

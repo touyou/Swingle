@@ -10,7 +10,7 @@ import Foundation
 import APIKit
 import Himotoki
 
-struct SwingleError: ErrorType {
+struct SwingleError: Error {
     let message: String
 
     init(statusCode: Int) {
@@ -31,7 +31,7 @@ struct SwingleError: ErrorType {
             message = "不明なエラーが発生しました。"
 
         default:
-            message = "Unknown Error"
+            message = "Unknown Error code=\(statusCode)"
         }
     }
 }

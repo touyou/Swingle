@@ -12,28 +12,46 @@ import Himotoki
 import Result
 
 public extension Swingle {
-    func getSongChorusInfo(url: String, revision: Int? = nil, success: (Chorus) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    /**
+    GET song/chorus.json
+
+    Example:
+
+        Swingle().getSongChorusInfo("URL", success: { chorus in
+            print("first chorus duration: \(chorus.chorusSegments?[0].duration)")
+        })
+    */
+    func getSongChorusInfo(_ url: String, revision: Int? = nil, success: @escaping (Chorus) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongChorusInfo(url: url, revision: revision)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
-            case .Success(let chorus):
+            case .success(let chorus):
                 success(chorus)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }
         }
     }
 
-    func getChorusRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    /**
+    GET song/chorus_revision.json
+
+    Example:
+
+        Swingle().getChorusRevisions("URL", success: { revisions in
+            print("first chorus revision: \(revisions.revisions?[0].updatedAt)")
+        })
+    */
+    func getChorusRevisions(_ url: String, success: @escaping (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetChorusRevisions(url: url)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
-            case .Success(let revisions):
+            case .success(let revisions):
                 success(revisions)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }

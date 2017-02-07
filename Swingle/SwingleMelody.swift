@@ -12,31 +12,58 @@ import Himotoki
 import Result
 
 public extension Swingle {
-    func getSongMelodyInfo(url: String, revision: Int? = nil, success: (Notes) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+    /**
+    GET song/melody.json
+
+    Example:
+
+        Swingle().getSongMelodyInfo("URL", success: { melody in
+            print("first pitch: \(melody.notes?[0].pitch)")
+        })
+    */
+    func getSongMelodyInfo(_ url: String, revision: Int? = nil, success: @escaping (Notes) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetSongMelodyInfo(url: url, revision: revision)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
-            case .Success(let melody):
+            case .success(let melody):
                 success(melody)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }
         }
     }
 
-    func getMelodyRevisions(url: String, success: (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
+
+    /**
+    GET song/melody_revision.json
+
+    Example:
+
+        Swingle().getMelodyRevisions("URL", success: { revisions in
+            print("first melody revision: \(revisions.revisions?[0].updatedAt)")
+        })
+     */
+    func getMelodyRevisions(_ url: String, success: @escaping (Revisions) -> Void, failure: ((SessionTaskError) -> Void)? = nil) {
         let request = GetMelodyRevisions(url: url)
 
-        Session.sendRequest(request) { result in
+        Session.send(request) { result in
             switch result {
-            case .Success(let revisions):
+            case .success(let revisions):
                 success(revisions)
-            case .Failure(let error):
+            case .failure(let error):
                 failure?(error)
                 print("error: \(SwingleError(statusCode: error._code).message)")
             }
         }
+    }
+
+    /**
+    */
+    func playMelody(_ url: String, failure: ((SessionTaskError) -> Void)? = nil) {
+        self.getSongMelodyInfo(url, success: { notes in
+
+            }, failure: failure)
     }
 }
